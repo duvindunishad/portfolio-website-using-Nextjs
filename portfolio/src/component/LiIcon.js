@@ -5,7 +5,7 @@ const LiIcon = ({reference}) => {
 
     const {scrollYProgress} = useScroll(
         {
-          target: reference,
+          target: reference, 
           offset:["center end", "center center"]
         }
       )
