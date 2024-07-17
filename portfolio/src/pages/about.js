@@ -6,6 +6,7 @@ import profilepic from '../../public/images/profile/developer-pic-2.jpg'
 import Image from 'next/image'
 import { useInView, useMotionValue, useSpring } from 'framer-motion'
 import Skills from '@/component/Skills'
+import Experience from '@/component/Experience'
 
 
 const AnimatedNumbers = ({value})=>{
@@ -86,6 +87,7 @@ every project I work on. I look forward to the opportunity to bring my skills an
             </div>
         </div>
         <Skills/>
+        <Experience/>
         </Layout>
       </main>
     </>
