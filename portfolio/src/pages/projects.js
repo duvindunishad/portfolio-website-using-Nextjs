@@ -79,7 +79,7 @@ const projects = () => {
         <title>Duvindu | Project Page</title>
         <meta name="description" content="any description" />
       </Head>
-      <main className='w-full mb-16 flex flex-col items-center justify-center dark:text-light'>
+      <main className='w-full mb-16 flex flex-col items-center justify-center overflow-hidden dark:text-light'>
         <Layout className='pt-16'>
           <AnimatedText text="Imagination Trumps Knowledge!"
             className='mb-16' />
