@@ -12,6 +12,7 @@ import article4 from "../../public/images/articles/todo list app built using rea
 import article5 from "../../public/images/articles/What is Redux with easy explanation.png"
 import article6 from "../../public/images/articles/What is higher order component in React.jpg"
 import article7 from "../../public/images/articles/What is Redux with easy explanation.png"
+import TransitionEffect from '@/component/TransitionEffect'
 
 const FramerImage = motion(Image);
 
@@ -93,6 +94,7 @@ const articles = () => {
         <title>Duvindu | About Page</title>
         <meta name="description" content="any description"/>
       </Head>
+      <TransitionEffect/>
       <main className='w-full mb-16 flex flex-col items-center justify-center overflow-hidden dark:text-light'>
         <Layout className='pt-16'>
           <AnimatedText text="Words Can Change The World! " className='mb-16 lg:!text-7xl sm:mb-8 sm:!text-6xl xs:!text-4xl'/>

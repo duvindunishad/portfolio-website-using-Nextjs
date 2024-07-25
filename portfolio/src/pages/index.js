@@ -6,10 +6,18 @@ import Link from "next/link";
 import { LinkArrow } from "@/component/Icons";
 import HireMe from "@/component/HireMe";
 import lightBulb from "../../public/images/svgs/miscellaneous_icons_1.svg";
+import TransitionEffect from "@/component/TransitionEffect";
+import Head from "next/head";
 
 
 export default function Home() {
   return (
+    <>
+    <Head>
+    <title>Portfolio</title>
+    <meta name="description" content="any description" />
+  </Head>
+    <TransitionEffect />
     <main className='flex items-center text-dark w-full min-h-screen dark:text-light '>
      <Layout className='pt-0 md:p-16 sm:pt-8'>
       <div className= 'flex items-center justify-between w-full lg:flex-col'>
@@ -44,6 +52,7 @@ export default function Home() {
       <Image src={lightBulb} alt="duvindu" className='w-full h-auto'/>
      </div>
     </main>     
+    </>
   );
 }
  
