@@ -46,7 +46,7 @@ const NavBar = () => {
   }
   return (
     <header
-    className="w-full px-32 py-8 font-medium flex items-center justify-between
+    className=" w-full px-32 py-8 font-medium flex items-center justify-between
     dark:text-light relative z-10 lg:px-16 md:px-12 sm:px-8">
       <button className="flex-col justify-center items-center hidden lg:flex" onClick={handleClick}>
         <span className={`bg-dark dark:bg-light block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm ${isOpen ? 'rotate-45 translate-y-1' : '-translate-y-0.5'}`}></span>
@@ -56,9 +56,9 @@ const NavBar = () => {
       <div className="w-full flex justify-between items-center lg:hidden">
       <nav>
         <CustomLink href = "/" title="Home" className='mr-4'/>
-        <CustomLink href = "/about" title="About" className='mr-4'/>
-        <CustomLink href = "/projects" title="Projects" className='mr-4'/>
-        <CustomLink href = "/articles" title="Article" className='ml-4'/>
+        <CustomLink href = "/aboutpage" title="About" className='mr-4'/>
+        <CustomLink href = "/projectpage" title="Projects" className='mr-4'/>
+        <CustomLink href = "/articlepage" title="Article" className='ml-4'/>
       </nav>
       <nav className="flex items-center justify-center flex-wrap">
         <motion.a href="https://www.google.com/" target={"_blank"}
