@@ -5,9 +5,9 @@ import React, {useRef, useEffect} from 'react'
 import profilepic from '../../public/images/profile/developer-pic-2.jpg'
 import Image from 'next/image'
 import { useInView, useMotionValue, useSpring } from 'framer-motion'
-import Skills from '@/component/Skills'
-import Experience from '@/component/Experience'
-import Education from '@/component/Education'
+import Skills from '@/component/aboutpage/Skills'
+import Experience from '@/component/aboutpage/Experience'
+import Education from '@/component/aboutpage/Education'
 import TransitionEffect from '@/component/TransitionEffect'
 
 
@@ -49,18 +49,14 @@ const about = () => {
             <div className='col-span-3 flex flex-col items-start justify-start xl:col-span-4 md:order-2 md:col-span-8'>
                 <h2 className="mb-4 text-lg font-bold uppercase text-dark/75 dark:text-light/75">Biography</h2>
                 <p className='font-medium'>
-                Hi, Im Duvindu, a web developer and UI/UX designer with a passion for creating beautiful, functional, 
-and user-centered digital experiences. With 4 years of experience in the field. I am always looking for 
-new and innovative ways to bring my clients visions to life.
+                
+I am Duvindu Nishad, a passionate Software Engineer specializing in full stack development, with a BSc. (Hons) in Software Engineering from Plymouth University, where I graduated with Second Class Honours (Lower division). I actively contribute to the Free and Open Source Software (FOSS) Community at NSBM Green University and run a YouTube channel, Digitalcodehub, where I create coding tutorials and sell mini projects. My technical expertise spans a wide range of technologies, including HTML, CSS, SCSS, JavaScript, C#, Java, React, Angular, and various database systems like MySQL and MongoDB.
                 </p>
                 <p className='my-4 font-medium'>
-                I believe that design is about more than just making things look pretty – it s about solving problems and 
-                creating intuitive, enjoyable experiences for users. 
+                Throughout my academic and professional journey, I have undertaken several impactful projects. Notable among them is a web-based donation application that connects donors with low-income individuals, a portfolio sharing and hiring application, an e-commerce mobile app, and a residential information management system. These projects highlight my proficiency in using modern development tools and frameworks such as React.js, AngularJS, Express.js, Node.js, and Kotlin, and underscore my ability to design and implement functional and efficient software solutions.
                 </p>
                 <p className='font-medium'>
-                Whether Im working on a website, mobile app, or 
-other digital product, I bring my commitment to design excellence and user-centered thinking to 
-every project I work on. I look forward to the opportunity to bring my skills and passion to your next project.
+                n my free time, I engage in learning new technologies and enhancing my skills through UI/UX design and mini projects involving HTML, CSS, and JavaScript. My dedication to continuous learning and improvement, coupled with my strong problem-solving abilities, teamwork, and attention to detail, make me a valuable asset in any software development team. I am currently seeking an entry-level position or internship to collaborate with cross-functional teams and gain hands-on experience in software development and database management.
                 </p>
             </div>
             <div className='col-span-3 relative h-max rounded-2xl border-2 border-solid border-dark
@@ -73,14 +69,14 @@ every project I work on. I look forward to the opportunity to bring my skills an
             <div className='col-span-2 flex flex-col items-end justify-between xl:col-span-8 xl:flex-row xl:items-center md:order-3'>
                 <div className='flex flex-col items-end justify-center xl:items-center'>
                     <span className='inline-block text-7xl font-bold md:text-6xl sm:text-5xl xs:text-4xl'>
-                        <AnimatedNumbers value={50}/>+
+                        <AnimatedNumbers value={13}/>+
                     </span>
                     <h2 className='text-xl font-medium capitalize text-dark/75 dark:text-light/75
                     xl:text-center md:text-lg sm:text-base xs:text-sm'>satisfied clients</h2>
                 </div>
                 <div className='flex flex-col items-end justify-center xl:items-center'>
                     <span className='inline-block text-7xl font-bold md:text-6xl sm:text-5xl xs:text-4xl'>
-                    <AnimatedNumbers value={40}/>+
+                    <AnimatedNumbers value={6}/>+
                     </span>
                     <h2 className='text-xl font-medium capitalize text-dark/75 dark:text-light/75
                     xl:text-center md:text-lg sm:text-base xs:text-sm'>projects completed</h2>

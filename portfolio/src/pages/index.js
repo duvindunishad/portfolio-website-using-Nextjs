@@ -8,6 +8,9 @@ import HireMe from "@/component/HireMe";
 import lightBulb from "../../public/images/svgs/miscellaneous_icons_1.svg";
 import TransitionEffect from "@/component/TransitionEffect";
 import Head from "next/head";
+import AboutPage from "./aboutpage";
+import ArticlesPage from "./articlepage";
+import ProjectsPage from "./projectpage";
 
 
 export default function Home() {
@@ -29,10 +32,11 @@ export default function Home() {
         <div className='w-1/2 flex flex-col items-center self-center lg:w-full lg:text-center'>
           <AnimatedText text="Turning Vision Into Reality With Code And Design." className='!text-6xl !text-left
           xl:!text-5xl lg:!text-center lg:!text-6xl md:!text-5xl sm:!text-3xl'/>
-          <p className='my-4 text-base font-medium md:text-sm sm:text-xs'>As a skilled full-stack developer, I am dedicated to turning ideas into innovative web applications. 
-          Explore my latest projects and articles, showcasing my expertise in React.js and web development.</p>
+          <p className='my-4 text-base font-medium md:text-sm sm:text-xs'>
+          Skilled MERN stack developer with expertise in Next.js, React, MongoDB, JavaScript, Node.js, and TypeScript, specializing in building scalable, user-friendly web applications. Passionate about problem-solving, clean code, and delivering high-performance solutions in dynamic environments.
+          </p>
           <div className='flex items-center self-start mt-2 lg:self-center'>
-            <Link href="/dummy.pdf" target={"_blank"} className="flex items-center bg-black text-light
+            <Link href="/DuvinduNishad.pdf" target={"_blank"} className="flex items-center bg-black text-light
             p-2.5 px-6 rounded-lg text-lg font-semibold hover:bg-light hover:text-dark
             border-2 border-solid border-transparent hover:border-dark
             
@@ -41,7 +45,7 @@ export default function Home() {
             download={true}>Resume
             <LinkArrow className={"w-6 ml-1"}/></Link>
             
-            <Link href="mailto:divindunishad@gmail.com" target={"_blank"}
+            <Link href="mailto:duvindunishad@gmail.com" target={"_blank"}
             className="ml-4 text-lg font-medium capitalize text-dark underline dark:text-light md:text-base">Contact</Link>
           </div>
         </div>
@@ -52,6 +56,9 @@ export default function Home() {
       <Image src={lightBulb} alt="duvindu" className='w-full h-auto'/>
      </div>
     </main>     
+    <AboutPage/>
+    <ArticlesPage/>
+    <ProjectsPage/>
     </>
   );
 }
