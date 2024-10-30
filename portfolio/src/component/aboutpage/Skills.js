@@ -40,8 +40,8 @@ const Skill = ({ name }) => {
 
 const Skills = () => {
   return (
-    <section className="mt-2 bg-light dark:bg-dark relative w-full min-h-screen flex flex-col items-center justify-center bg-gradient-to-br py-16">
-      <h2 className="font-extrabold text-7xl text-gray-800 dark:text-gray-100 tracking-tight mb-12 md:text-5xl">
+<section className="mt-4 bg-light dark:bg-dark relative w-full min-h-screen flex flex-col items-center justify-center py-16 shadow-lg">
+<h2 className="font-extrabold text-7xl text-gray-800 dark:text-gray-100 tracking-tight mb-12 md:text-5xl">
         Skills
       </h2>
 
