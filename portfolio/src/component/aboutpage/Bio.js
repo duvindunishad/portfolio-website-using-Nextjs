@@ -17,6 +17,7 @@ const Bio = () => (
         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
       />
     </div>
+    
 
     {/* Biography Text Section */}
     <div className="col-span-5 flex flex-col items-start justify-center space-y-4 text-gray-800 dark:text-gray-300 md:col-span-8 xl:col-span-4">

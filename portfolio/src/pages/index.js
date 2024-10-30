@@ -30,8 +30,11 @@ export default function Home() {
           sizes="(max-width: 768px) 100vw, (max-width: 1200px)50vw, 50vw"/>
         </div>
         <div className='w-1/2 flex flex-col items-center self-center lg:w-full lg:text-center'>
-          <AnimatedText text="Turning Vision Into Reality With Code And Design." className='!text-6xl !text-left
-          xl:!text-5xl lg:!text-center lg:!text-6xl md:!text-5xl sm:!text-3xl'/>
+        <AnimatedText 
+  text="Hello! 👋 I'm Duvindu Nishad " 
+  className='!text-6xl !text-left xl:!text-5xl lg:!text-center lg:!text-6xl md:!text-5xl sm:!text-3xl' 
+/>
+
           <p className='my-4 text-base font-medium md:text-sm sm:text-xs'>
           Skilled MERN stack developer with expertise in Next.js, React, MongoDB, JavaScript, Node.js, and TypeScript, specializing in building scalable, user-friendly web applications. Passionate about problem-solving, clean code, and delivering high-performance solutions in dynamic environments.
           </p>
@@ -57,8 +60,8 @@ export default function Home() {
      </div>
     </main>     
     <AboutPage/>
-    <ArticlesPage/>
     <ProjectsPage/>
+    <ArticlesPage/>
     </>
   );
 }

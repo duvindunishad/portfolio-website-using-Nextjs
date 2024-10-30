@@ -31,14 +31,14 @@ const Project = ({ title, type, img, link, github }) => {
 
       {/* Project Details */}
       <div className="w-full flex flex-col items-start justify-between mt-4">
-        <span className="text-blue-600 font-medium text-lg dark:text-blue-400">{type}</span>
+        <span className="text-primary font-medium text-lg dark:text-primaryDark">{type}</span>
         <Link href={link} target="_blank" className="hover:underline underline-offset-2">
           <h2 className="my-2 text-3xl font-bold text-gray-800 dark:text-gray-100">{title}</h2>
         </Link>
         
         {/* Action Links */}
         <div className="w-full mt-2 flex items-center justify-between">
-          <Link href={link} target="_blank" className="text-lg font-semibold text-blue-600 hover:underline dark:text-blue-400 md:text-base">
+          <Link href={link} target="_blank" className="text-lg font-semibold text-primary hover:underline dark:text-primaryDark md:text-base">
             Visit
           </Link>
           <Link href={github} target="_blank" className="w-8 h-8 md:w-6 md:h-6 flex items-center justify-center">

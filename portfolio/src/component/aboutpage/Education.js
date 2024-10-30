@@ -18,7 +18,7 @@ const Details = ({ type, time, place, info }) => {
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.6, type: 'spring' }}
       >
-        <h3 className="font-semibold text-3xl text-dark dark:text-white capitalize sm:text-2xl">
+        <h3 className="font-semibold text-3xl text-primary dark:text-primaryDark capitalize sm:text-2xl">
           {type}
         </h3>
         <span className="block text-gray-500 dark:text-gray-400 text-lg mt-1 sm:text-base">

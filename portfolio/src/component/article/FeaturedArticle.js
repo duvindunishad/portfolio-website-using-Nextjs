@@ -47,7 +47,7 @@ const FeaturedArticle = ({ img, title, time, summery, link }) => {
         {summery}
       </p>
       
-      <span className="text-xs font-medium text-blue-600 dark:text-blue-400">
+      <span className="text-xs font-medium text-primary dark:text-primaryDark">
         {time}
       </span>
     </motion.li>
