@@ -106,7 +106,7 @@ const socialLinks = [
 
 const SocialMediaCards = ({
   className = "",
-  columns = "grid-cols-3 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4",
+  columns = "grid-cols-3 sm:grid-cols-1 lg:grid-cols-3 xl:grid-cols-4",
   animation = true,
   cardSize = "normal", // 'normal' or 'compact'
 }) => {
