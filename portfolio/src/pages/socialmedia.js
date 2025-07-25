@@ -11,6 +11,8 @@ import {
 } from "react-icons/fi";
 import { SiTiktok, SiBuymeacoffee } from "react-icons/si";
 import Link from "next/link";
+import Head from "next/head";
+import TransitionEffect from "@/component/TransitionEffect";
 
 const socialLinks = [
   {
@@ -106,164 +108,177 @@ const socialLinks = [
 
 const SocialMediaCards = ({
   className = "",
-  columns = "grid-cols-3 sm:grid-cols-1 lg:grid-cols-3 xl:grid-cols-4",
+  columns = "grid-cols-4 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4",
   animation = true,
-  cardSize = "normal", // 'normal' or 'compact'
+  cardSize = "normal",
 }) => {
   return (
-    <section className="py-16 px-4 sm:px-6 max-w-7xl mx-auto">
-      <div className="text-center mb-16">
-        <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="mb-8"
-        >
-          <motion.h2
-            className="text-6xl font-bold mb-4 bg-gradient-to-r dark:text-primaryDark text-primary bg-clip-text "
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-          >
-            Connect With Me
-          </motion.h2>
-          <motion.div
-            className="w-24 h-1 bg-gradient-to-r from-purple-500 to-blue-500 mx-auto rounded-full"
-            initial={{ width: 0 }}
-            animate={{ width: "6rem" }}
-            transition={{ delay: 0.5, duration: 0.8 }}
-          />
-        </motion.div>
-
-        <motion.p
-          className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto text-lg md:text-xl leading-relaxed"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.8, duration: 0.6 }}
-        >
-          Let&apos;s build connections! Follow my journey across platforms for
-          daily tech insights, tutorials, and behind-the-scenes content.
-        </motion.p>
-
-        <motion.p
-          className="mt-4 text-sm text-gray-500 dark:text-gray-400 italic"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1.2, duration: 0.6 }}
-        >
-          (All links open in new tab)
-        </motion.p>
-      </div>
-      <div className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ${className}`}>
-        <motion.div
-          className={`grid ${columns} gap-6`}
-          initial="hidden"
-          animate="visible"
-          variants={{
-            hidden: { opacity: 0 },
-            visible: {
-              opacity: 1,
-              transition: {
-                staggerChildren: 0.1,
-              },
-            },
-          }}
-        >
-          {socialLinks.map((link, index) => (
+    <>
+      <Head>
+        <title>Duvindu | Social Media</title>
+        <meta
+          name="description"
+          content="Connect with Duvindu across various social media platforms"
+        />
+      </Head>
+      <main className="w-full flex flex-col items-center justify-center dark:text-light">
+        <TransitionEffect />
+        <section className="py-16 px-4 sm:px-6 max-w-7xl mx-auto w-full">
+          <div className="text-center mb-16">
             <motion.div
-              key={index}
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="mb-8"
+            >
+              <motion.h2
+                className=" sm:text-3xl text-6xl font-bold mb-4 bg-gradient-to-r dark:text-white text-black bg-clip-text "
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+              >
+                Connect With Me
+              </motion.h2>
+              <motion.div
+                className="w-24 h-1 bg-gradient-to-r from-primary to-primaryDark mx-auto rounded-full"
+                initial={{ width: 0 }}
+                animate={{ width: "10rem" }}
+                transition={{ delay: 0.5, duration: 0.8 }}
+              />
+            </motion.div>
+
+            <motion.p
+              className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto text-lg md:text-xl leading-relaxed"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.8, duration: 0.6 }}
+            >
+              Let&apos;s build connections! Follow my journey across platforms
+              for daily tech insights, tutorials, and behind-the-scenes content.
+            </motion.p>
+
+            <motion.p
+              className="mt-4 text-sm text-gray-500 dark:text-gray-400 italic"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 1.2, duration: 0.6 }}
+            >
+              (All links open in new tab)
+            </motion.p>
+          </div>
+
+          <div className={`w-full ${className}`}>
+            <motion.div
+              className={`grid ${columns} gap-6`}
+              initial="hidden"
+              animate="visible"
               variants={{
-                hidden: { y: 20, opacity: 0 },
+                hidden: { opacity: 0 },
                 visible: {
-                  y: 0,
                   opacity: 1,
                   transition: {
-                    duration: 0.5,
+                    staggerChildren: 0.1,
                   },
                 },
               }}
-              whileHover={animation ? { y: -5 } : {}}
             >
-              <Link
-                href={link.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={link.name}
-                className={`block h-full rounded-xl shadow-lg overflow-hidden transition-all duration-300 ${
-                  link.color
-                } ${link.hoverColor} ${link.textColor} hover:shadow-xl ${
-                  cardSize === "compact" ? "p-4" : "p-6"
-                }`}
-              >
-                <div
-                  className={`h-full flex flex-col ${
-                    cardSize === "compact" ? "gap-2" : "gap-4"
-                  }`}
+              {socialLinks.map((link, index) => (
+                <motion.div
+                  key={index}
+                  variants={{
+                    hidden: { y: 20, opacity: 0 },
+                    visible: {
+                      y: 0,
+                      opacity: 1,
+                      transition: {
+                        duration: 0.5,
+                      },
+                    },
+                  }}
+                  whileHover={animation ? { y: -5 } : {}}
                 >
-                  <div className="flex justify-between items-start">
-                    <div className="flex items-center gap-3">
-                      <div
-                        className={`p-2 rounded-lg ${link.iconBg} ${
-                          link.iconColor || "text-white"
-                        }`}
-                      >
-                        {React.cloneElement(link.icon, {
-                          className:
-                            cardSize === "compact" ? "w-4 h-4" : "w-5 h-5",
-                        })}
-                      </div>
-                      <h3
-                        className={`font-bold ${
-                          cardSize === "compact" ? "text-base" : "text-xl"
-                        }`}
-                      >
-                        {link.name}
-                      </h3>
-                    </div>
-                    <FiExternalLink
-                      className={`${
-                        cardSize === "compact" ? "w-4 h-4" : "w-5 h-5"
-                      } opacity-70`}
-                    />
-                  </div>
-
-                  <p
-                    className={`${
-                      cardSize === "compact" ? "text-xs" : "text-sm"
-                    } opacity-90`}
-                  >
-                    {link.description}
-                  </p>
-
-                  <div
-                    className={`mt-auto pt-3 border-t border-opacity-20 ${
-                      link.textColor === "text-white"
-                        ? "border-white"
-                        : "border-current"
+                  <Link
+                    href={link.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={link.name}
+                    className={`block h-full rounded-xl shadow-lg overflow-hidden transition-all duration-300 ${
+                      link.color
+                    } ${link.hoverColor} ${link.textColor} hover:shadow-xl ${
+                      cardSize === "compact" ? "p-4" : "p-6"
                     }`}
                   >
-                    <p
-                      className={`${
-                        cardSize === "compact" ? "text-xs" : "text-sm"
-                      } opacity-75`}
+                    <div
+                      className={`h-full flex flex-col ${
+                        cardSize === "compact" ? "gap-2" : "gap-4"
+                      }`}
                     >
-                      STATS
-                    </p>
-                    <p
-                      className={`${
-                        cardSize === "compact" ? "text-sm" : "text-base"
-                      } font-medium`}
-                    >
-                      {link.stats}
-                    </p>
-                  </div>
-                </div>
-              </Link>
+                      <div className="flex justify-between items-start">
+                        <div className="flex items-center gap-3">
+                          <div
+                            className={`p-2 rounded-lg ${link.iconBg} ${
+                              link.iconColor || "text-white"
+                            }`}
+                          >
+                            {React.cloneElement(link.icon, {
+                              className:
+                                cardSize === "compact" ? "w-4 h-4" : "w-5 h-5",
+                            })}
+                          </div>
+                          <h3
+                            className={`font-bold ${
+                              cardSize === "compact" ? "text-base" : "text-xl"
+                            }`}
+                          >
+                            {link.name}
+                          </h3>
+                        </div>
+                        <FiExternalLink
+                          className={`${
+                            cardSize === "compact" ? "w-4 h-4" : "w-5 h-5"
+                          } opacity-70`}
+                        />
+                      </div>
+
+                      <p
+                        className={`${
+                          cardSize === "compact" ? "text-xs" : "text-sm"
+                        } opacity-90`}
+                      >
+                        {link.description}
+                      </p>
+
+                      <div
+                        className={`mt-auto pt-3 border-t border-opacity-20 ${
+                          link.textColor === "text-white"
+                            ? "border-white"
+                            : "border-current"
+                        }`}
+                      >
+                        <p
+                          className={`${
+                            cardSize === "compact" ? "text-xs" : "text-sm"
+                          } opacity-75`}
+                        >
+                          STATS
+                        </p>
+                        <p
+                          className={`${
+                            cardSize === "compact" ? "text-sm" : "text-base"
+                          } font-medium`}
+                        >
+                          {link.stats}
+                        </p>
+                      </div>
+                    </div>
+                  </Link>
+                </motion.div>
+              ))}
             </motion.div>
-          ))}
-        </motion.div>
-      </div>
-    </section>
+          </div>
+        </section>
+      </main>
+    </>
   );
 };
 

@@ -59,17 +59,17 @@ const AboutPage = () => {
           <section className="w-full mb-24">
             <AnimatedText
               text="Passion Fuels Purpose"
-              className="mb-16 text-7xl font-bold text-center lg:text-6xl md:text-5xl sm:text-4xl"
+              className=" mb-16 text-7xl font-bold text-center lg:text-6xl md:text-5xl sm:text-4xl"
             />
 
             <div className="grid grid-cols-8 gap-16 md:gap-8 sm:gap-4">
               {/* Biography */}
               <div className="col-span-3 flex flex-col space-y-6 xl:col-span-4 md:col-span-8 md:order-2">
-                <h2 className="text-xl font-semibold uppercase tracking-wider">
+                <h2 className="dark:text-white text-dark text-xl font-semibold uppercase tracking-wider">
                   Professional Profile
                 </h2>
 
-                <div className="space-y-4 text-lg leading-relaxed">
+                <div className="dark:text-white text-dark space-y-4 text-lg leading-relaxed">
                   <p>
                     I&apos;m <strong>Duvindu Nishad</strong>, a dedicated
                     Software Engineer specializing in full stack development.
@@ -94,8 +94,8 @@ const AboutPage = () => {
               </div>
 
               {/* Profile Image */}
-              <div className="col-span-3 relative xl:col-span-4 md:col-span-8 md:order-1">
-                <div className="relative h-full w-full rounded-xl overflow-hidden border-2 border-black shadow-2xl">
+              <div className="col-span-3 relative xl:col-span-4 md:col-span-8 md:order-1 ">
+                <div className="relative h-full w-full rounded-xl overflow-hidden border-2 border-black shadow-2xl ">
                   <Image
                     src={profilePic}
                     alt="Duvindu Nishad - Full Stack Developer"
@@ -105,7 +105,7 @@ const AboutPage = () => {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent" />
                 </div>
-                <div className="absolute -z-10 -right-3 -top-3 w-full h-full rounded-xl bg-black" />
+                <div className="absolute -z-10 -right-3 -top-3 w-full h-full rounded-xl bg-black dark:bg-white" />
               </div>
 
               {/* Stats */}
@@ -115,10 +115,10 @@ const AboutPage = () => {
                     key={index}
                     className="flex flex-col items-end xl:items-center"
                   >
-                    <span className="text-6xl font-bold md:text-5xl sm:text-4xl">
+                    <span className="dark:text-white text-dark text-6xl font-bold md:text-5xl sm:text-4xl">
                       <AnimatedNumber value={stat.value} />+
                     </span>
-                    <h3 className="text-lg font-medium mt-2 text-gray-700 md:text-base">
+                    <h3 className="text-lg font-medium mt-2 text-gray-400 md:text-base">
                       {stat.label}
                     </h3>
                   </div>
@@ -129,25 +129,25 @@ const AboutPage = () => {
 
           {/* Skills Section */}
           <section className="mb-24">
-            <h2 className="text-4xl font-bold mb-12 text-center">
+            {/* <h2 className="dark:text-white text-dark text-4xl font-bold mb-12 text-center">
               Technical Expertise
-            </h2>
+            </h2> */}
             <Skills />
           </section>
 
           {/* Experience Section */}
           <section className="mb-24">
-            <h2 className="text-4xl font-bold mb-12 text-center">
+            {/* <h2 className="dark:text-white text-dark text-4xl font-bold mb-12 text-center">
               Professional Journey
-            </h2>
+            </h2> */}
             <Experience />
           </section>
 
           {/* Education Section */}
           <section>
-            <h2 className="text-4xl font-bold mb-12 text-center">
+            {/* <h2 className="dark:text-white text-dark text-4xl font-bold mb-12 text-center">
               Academic Background
-            </h2>
+            </h2> */}
             <Education />
           </section>
         </Layout>

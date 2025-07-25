@@ -25,7 +25,7 @@ const ArticlesPage = () => {
         />
       </Head>
       <TransitionEffect />
-      <main className="w-full mb-16 flex flex-col items-center justify-center overflow-hidden dark:text-light">
+      <main className="w-full -mb-14 flex flex-col items-center justify-center overflow-hidden dark:text-light">
         <Layout className="pt-16">
           <div className="text-center mb-16">
             <motion.div
@@ -35,7 +35,7 @@ const ArticlesPage = () => {
               className="mb-8"
             >
               <motion.h2
-                className="text-6xl font-bold mb-4 bg-gradient-to-r dark:text-primaryDark text-primary bg-clip-text "
+                className=" sm:text-3xl text-6xl font-bold mb-4 bg-gradient-to-r dark:text-white text-black bg-clip-text "
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
@@ -45,7 +45,7 @@ const ArticlesPage = () => {
               <motion.div
                 className="w-24 h-1 bg-gradient-to-r from-purple-500 to-blue-500 mx-auto rounded-full"
                 initial={{ width: 0 }}
-                animate={{ width: "6rem" }}
+                animate={{ width: "10rem" }}
                 transition={{ delay: 0.5, duration: 0.8 }}
               />
             </motion.div>
@@ -86,9 +86,9 @@ const ArticlesPage = () => {
               img={article2}
             />
           </ul>
-          <h2 className="font-bold text-4xl w-full text-center my-16 mt-32">
+          {/* <h2 className="font-bold text-4xl w-full text-center my-16 mt-32">
             All Articles
-          </h2>
+          </h2> */}
           <ul>
             <Article
               title="Form Validation In Reactjs: Build A Reusable Custom Hook For Inputs And Error Handling"

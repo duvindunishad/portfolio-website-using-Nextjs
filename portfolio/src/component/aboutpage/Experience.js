@@ -1,8 +1,8 @@
 // components/Experience.js
 
-import React, { useRef } from 'react';
-import { useScroll, motion } from 'framer-motion';
-import LiIcon from '../LiIcon';
+import React, { useRef } from "react";
+import { useScroll, motion } from "framer-motion";
+import LiIcon from "../LiIcon";
 
 const Details = ({ position, company, companyLink, time, address, work }) => {
   const ref = useRef(null);
@@ -16,18 +16,25 @@ const Details = ({ position, company, companyLink, time, address, work }) => {
       <motion.div
         initial={{ y: 50, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.6, type: 'spring' }}
+        transition={{ duration: 0.6, type: "spring" }}
       >
         <h3 className="font-semibold text-2xl text-dark dark:text-white capitalize sm:text-xl">
-          {position}{' '}
-          <a href={companyLink} target="_blank" rel="noopener noreferrer" className="text-primary dark:text-primaryDark">
+          {position}{" "}
+          <a
+            href={companyLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-primary dark:text-primaryDark"
+          >
             @{company}
           </a>
         </h3>
         <span className="block text-gray-500 dark:text-gray-400 text-lg mt-1 sm:text-base">
           {time} | {address}
         </span>
-        <p className="mt-3 text-gray-600 dark:text-gray-300 font-medium sm:text-sm text-justify">{work}</p>
+        <p className="mt-3 text-gray-600 dark:text-gray-300 font-medium sm:text-sm text-justify">
+          {work}
+        </p>
       </motion.div>
     </li>
   );
@@ -37,15 +44,55 @@ const Experience = () => {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ['start end', 'center start'],
+    offset: ["start end", "center start"],
   });
 
   return (
-    <section className="py-24 bg-gradient-to-br ">
-      <h2 className="text-center text-6xl font-extrabold text-gray-800 dark:text-gray-200 mb-16 md:text-5xl">
+    <section className="py-16 px-4 sm:px-6 max-w-7xl mx-auto">
+      {/* <h2 className="text-center text-6xl font-extrabold text-gray-800 dark:text-gray-200 mb-16 md:text-5xl">
         Experience
-      </h2>
+      </h2> */}
+      <div className="text-center mb-16">
+        <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="mb-8"
+        >
+          <motion.h2
+            className="sm:text-3xl text-6xl font-bold mb-4 bg-gradient-to-r dark:text-white text-black bg-clip-text "
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            Experience          </motion.h2>
+          <motion.div
+            className="w-24 h-1 bg-gradient-to-r from-purple-500 to-blue-500 mx-auto rounded-full"
+            initial={{ width: 0 }}
+            animate={{ width: "10rem" }}
+            transition={{ delay: 0.5, duration: 0.8 }}
+          />
+        </motion.div>
 
+        {/* <motion.p
+              className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto text-lg md:text-xl leading-relaxed"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.8, duration: 0.6 }}
+            >
+              Let's build connections! Follow my journey across platforms for
+              daily tech insights, tutorials, and behind-the-scenes content.
+            </motion.p>
+
+            <motion.p
+              className="mt-4 text-sm text-gray-500 dark:text-gray-400 italic"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 1.2, duration: 0.6 }}
+            >
+              (All links open in new tab)
+            </motion.p> */}
+      </div>
       <div ref={ref} className="relative w-[80%] mx-auto lg:w-[90%] md:w-full">
         {/* Scroll Progress Indicator */}
         <motion.div

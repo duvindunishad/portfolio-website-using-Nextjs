@@ -78,16 +78,58 @@ const SkillsSection = () => {
 
   return (
     <section className="w-full min-h-screen flex flex-col items-center py-24 ">
-      <motion.h2
+      {/* <motion.h2
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         className="text-5xl font-bold mb-16 tracking-tight text-center"
       >
         Technical Expertise
-      </motion.h2>
+      </motion.h2> */}
+      <div className="text-center mb-16">
+        <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="mb-8"
+        >
+          <motion.h2
+            className="sm:text-3xl text-6xl font-bold mb-4 bg-gradient-to-r dark:text-white text-black bg-clip-text "
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            Technical Expertise{" "}
+          </motion.h2>
+          <motion.div
+            className="w-24 h-1 bg-gradient-to-r from-purple-500 to-blue-500 mx-auto rounded-full"
+            initial={{ width: 0 }}
+            animate={{ width: "10rem" }}
+            transition={{ delay: 0.5, duration: 0.8 }}
+          />
+        </motion.div>
 
-      <div className="w-full max-w-6xl px-4 space-y-12">
+        {/* <motion.p
+              className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto text-lg md:text-xl leading-relaxed"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.8, duration: 0.6 }}
+            >
+              Let's build connections! Follow my journey across platforms for
+              daily tech insights, tutorials, and behind-the-scenes content.
+            </motion.p>
+
+            <motion.p
+              className="mt-4 text-sm text-gray-500 dark:text-gray-400 italic"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 1.2, duration: 0.6 }}
+            >
+              (All links open in new tab)
+            </motion.p> */}
+      </div>
+
+      <div className="dark:text-white text-dark w-full max-w-6xl px-4 space-y-12">
         {skillCategories.map((category, catIndex) => (
           <motion.div
             key={catIndex}
@@ -122,7 +164,7 @@ const SkillsSection = () => {
         animate={{ opacity: 1 }}
         transition={{ delay: 1.2 }}
       >
-        <p className="text-lg leading-relaxed">
+        <p className="dark:text-white text-dark text-lg leading-relaxed">
           Full-stack proficiency with focus on modern web technologies and
           efficient development practices.
         </p>

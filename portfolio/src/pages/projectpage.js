@@ -30,7 +30,7 @@ const ProjectsPage = () => {
               className="mb-8"
             >
               <motion.h2
-                className="text-6xl font-bold mb-4 bg-gradient-to-r dark:text-primaryDark text-primary bg-clip-text "
+                className="sm:text-3xl text-6xl font-bold mb-4 bg-gradient-to-r dark:text-white text-black bg-clip-text "
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
@@ -40,7 +40,7 @@ const ProjectsPage = () => {
               <motion.div
                 className="w-24 h-1 bg-gradient-to-r from-purple-500 to-blue-500 mx-auto rounded-full"
                 initial={{ width: 0 }}
-                animate={{ width: "6rem" }}
+                animate={{ width: "10rem" }}
                 transition={{ delay: 0.5, duration: 0.8 }}
               />
             </motion.div>

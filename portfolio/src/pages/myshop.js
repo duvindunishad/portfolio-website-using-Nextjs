@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Head from "next/head";
 import { FiShoppingCart, FiHeart, FiStar, FiArrowRight } from "react-icons/fi";
+import TransitionEffect from "@/component/TransitionEffect";
 
 const products = [
   {
@@ -197,75 +199,87 @@ const MyShop = () => {
   };
 
   return (
-    <section className="py-16 px-4 sm:px-6 max-w-7xl mx-auto">
-      <div className="text-center mb-16">
-        <motion.h2
-          className="text-6xl font-bold mb-4 bg-gradient-to-r dark:text-primaryDark text-primary bg-clip-text "
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-        >
-          Premium Developer Resources
-        </motion.h2>
-        <motion.div
-          className="w-24 h-1 bg-gradient-to-r from-purple-500 to-blue-500 mx-auto rounded-full"
-          initial={{ width: 0 }}
-          animate={{ width: "6rem" }}
-          transition={{ delay: 0.5, duration: 0.8 }}
+    <>
+      <Head>
+        <title>Duvindu | Shop</title>
+        <meta
+          name="description"
+          content="Premium developer resources and tools"
         />
-        <motion.p
-          className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto text-lg"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.2, duration: 0.5 }}
-        >
-          Accelerate your projects with our professionally crafted tools and
-          learning materials
-        </motion.p>
-      </div>
-
-      <motion.div
-        className="grid grid-cols-3 md:grid-cols-4 sm:grid-cols-1 lg:grid-cols-3 gap-8 mb-16"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.4, duration: 0.5 }}
-      >
-        {products.map((product) => (
-          <ProductCard
-            key={product.id}
-            product={product}
-            addToCart={addToCart}
-          />
-        ))}
-      </motion.div>
-
-      {showCartNotification && (
-        <motion.div
-          className="fixed bottom-6 right-6 bg-white dark:bg-gray-800 p-4 rounded-xl shadow-2xl border border-gray-200 dark:border-gray-700 z-50"
-          initial={{ y: 100, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          exit={{ y: 100, opacity: 0 }}
-        >
-          <div className="flex items-center gap-3">
-            <div className="bg-green-100 dark:bg-green-900 p-2 rounded-full">
-              <FiShoppingCart className="w-5 h-5 text-green-600 dark:text-green-300" />
-            </div>
-            <div>
-              <p className="font-medium">Added to cart!</p>
-              <p className="text-sm text-gray-500 dark:text-gray-400">
-                {cart.length} {cart.length === 1 ? "item" : "items"} in cart
-              </p>
-            </div>
-            <button
-              className="ml-4 px-4 py-2 bg-black dark:bg-white text-white dark:text-black rounded-lg flex items-center gap-1 text-sm font-medium hover:bg-gray-800 dark:hover:bg-gray-200 transition-colors"
-              onClick={() => setShowCartNotification(false)}
+      </Head>
+      <main className="w-full -mb-14 flex flex-col items-center justify-center overflow-hidden dark:text-light">
+        <TransitionEffect />
+        <section className="py-16 px-4 sm:px-6 max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <motion.h2
+              className="text-6xl sm:text-3xl font-bold mb-4 bg-gradient-to-r dark:text-white text-black bg-clip-text"
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
             >
-              View <FiArrowRight />
-            </button>
+              Premium Developer Resources
+            </motion.h2>
+            <motion.div
+              className="w-24 h-1 bg-gradient-to-r from-purple-500 to-blue-500 mx-auto rounded-full"
+              initial={{ width: 0 }}
+              animate={{ width: "10rem" }}
+              transition={{ delay: 0.5, duration: 0.8 }}
+            />
+            <motion.p
+              className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto text-lg"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.2, duration: 0.5 }}
+            >
+              Accelerate your projects with our professionally crafted tools and
+              learning materials
+            </motion.p>
           </div>
-        </motion.div>
-      )}
-    </section>
+
+          <motion.div
+            className="grid grid-cols-3 md:grid-cols-2 sm:grid-cols-1 lg:grid-cols-3 gap-8 mb-16"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.4, duration: 0.5 }}
+          >
+            {products.map((product) => (
+              <ProductCard
+                key={product.id}
+                product={product}
+                addToCart={addToCart}
+              />
+            ))}
+          </motion.div>
+
+          {showCartNotification && (
+            <motion.div
+              className="fixed bottom-6 right-6 bg-white dark:bg-gray-800 p-4 rounded-xl shadow-2xl border border-gray-200 dark:border-gray-700 z-50"
+              initial={{ y: 100, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              exit={{ y: 100, opacity: 0 }}
+            >
+              <div className="flex items-center gap-3">
+                <div className="bg-green-100 dark:bg-green-900 p-2 rounded-full">
+                  <FiShoppingCart className="w-5 h-5 text-green-600 dark:text-green-300" />
+                </div>
+                <div>
+                  <p className="font-medium">Added to cart!</p>
+                  <p className="text-sm text-gray-500 dark:text-gray-400">
+                    {cart.length} {cart.length === 1 ? "item" : "items"} in cart
+                  </p>
+                </div>
+                <button
+                  className="ml-4 px-4 py-2 bg-black dark:bg-white text-white dark:text-black rounded-lg flex items-center gap-1 text-sm font-medium hover:bg-gray-800 dark:hover:bg-gray-200 transition-colors"
+                  onClick={() => setShowCartNotification(false)}
+                >
+                  View <FiArrowRight />
+                </button>
+              </div>
+            </motion.div>
+          )}
+        </section>
+      </main>
+    </>
   );
 };
 
