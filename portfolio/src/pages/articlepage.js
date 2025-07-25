@@ -1,4 +1,5 @@
 import Head from "next/head";
+import { motion } from "framer-motion";
 
 import article from "../../public/images/articles/create loading screen in react js.jpg";
 import article2 from "../../public/images/articles/create modal component in react using react portals.png";
@@ -18,12 +19,57 @@ const ArticlesPage = () => {
     <>
       <Head>
         <title>Duvindu | Articles</title>
-        <meta name="description" content="A collection of articles written by Duvindu" />
+        <meta
+          name="description"
+          content="A collection of articles written by Duvindu"
+        />
       </Head>
       <TransitionEffect />
       <main className="w-full mb-16 flex flex-col items-center justify-center overflow-hidden dark:text-light">
         <Layout className="pt-16">
-          <AnimatedText text="Words Can Change The World!" className="mb-16 lg:!text-7xl sm:mb-8 sm:!text-6xl xs:!text-4xl" />
+          <div className="text-center mb-16">
+            <motion.div
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="mb-8"
+            >
+              <motion.h2
+                className="text-6xl font-bold mb-4 bg-gradient-to-r dark:text-primaryDark text-primary bg-clip-text "
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+              >
+                Words Can Change The World!
+              </motion.h2>
+              <motion.div
+                className="w-24 h-1 bg-gradient-to-r from-purple-500 to-blue-500 mx-auto rounded-full"
+                initial={{ width: 0 }}
+                animate={{ width: "6rem" }}
+                transition={{ delay: 0.5, duration: 0.8 }}
+              />
+            </motion.div>
+
+            {/* <motion.p
+              className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto text-lg md:text-xl leading-relaxed"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.8, duration: 0.6 }}
+            >
+              Let's build connections! Follow my journey across platforms for
+              daily tech insights, tutorials, and behind-the-scenes content.
+            </motion.p> */}
+
+            {/* <motion.p
+              className="mt-4 text-sm text-gray-500 dark:text-gray-400 italic"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 1.2, duration: 0.6 }}
+            >
+              (All links open in new tab)
+            </motion.p> */}
+          </div>
+          {/* <AnimatedText text="Words Can Change The World!" className="mb-16 lg:!text-7xl sm:mb-8 sm:!text-6xl xs:!text-4xl" /> */}
           <ul className="grid grid-cols-2 gap-16 lg:gap-8 md:grid-cols-1 md:gap-y-16">
             <FeaturedArticle
               title="Build A Custom Pagination Component In Reactjs From Scratch"
@@ -40,7 +86,9 @@ const ArticlesPage = () => {
               img={article2}
             />
           </ul>
-          <h2 className="font-bold text-4xl w-full text-center my-16 mt-32">All Articles</h2>
+          <h2 className="font-bold text-4xl w-full text-center my-16 mt-32">
+            All Articles
+          </h2>
           <ul>
             <Article
               title="Form Validation In Reactjs: Build A Reusable Custom Hook For Inputs And Error Handling"

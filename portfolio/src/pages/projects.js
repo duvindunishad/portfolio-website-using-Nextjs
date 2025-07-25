@@ -81,16 +81,56 @@ const projects = () => {
         <title>Duvindu | Project Page</title>
         <meta name="description" content="any description" />
       </Head>
-      <TransitionEffect/>
-      <main className='w-full mb-16 flex flex-col items-center justify-center overflow-hidden dark:text-light'>
-        <Layout className='pt-16'>
-          <AnimatedText text="My Projects"
-            className='mb-16 lg:!text-7xl sm:mb-8 sm:!text-6xl xs:!text-4xl' />
+      <TransitionEffect />
+      <main className="w-full mb-16 flex flex-col items-center justify-center overflow-hidden dark:text-light">
+        <Layout className="pt-16">
+          {/* <AnimatedText text="My Projects"
+            className='mb-16 lg:!text-7xl sm:mb-8 sm:!text-6xl xs:!text-4xl' /> */}
+          <div className="text-center mb-16">
+            <motion.div
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="mb-8"
+            >
+              <motion.h2
+                className="text-6xl font-bold mb-4 bg-gradient-to-r dark:text-primaryDark text-primary bg-clip-text "
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+              >
+                My Projects
+              </motion.h2>
+              <motion.div
+                className="w-24 h-1 bg-gradient-to-r from-purple-500 to-blue-500 mx-auto rounded-full"
+                initial={{ width: 0 }}
+                animate={{ width: "6rem" }}
+                transition={{ delay: 0.5, duration: 0.8 }}
+              />
+            </motion.div>
 
-          <div className='grid grid-cols-12 gap-24 gap-y-32 xl:gap-x-16 lg:gap-x-8 md:gap-y-24 sm:gap-x-0'>
-            <div className='col-span-12'>
+            {/* <motion.p
+              className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto text-lg md:text-xl leading-relaxed"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.8, duration: 0.6 }}
+            >
+              Let's build connections! Follow my journey across platforms for
+              daily tech insights, tutorials, and behind-the-scenes content.
+            </motion.p>
+
+            <motion.p
+              className="mt-4 text-sm text-gray-500 dark:text-gray-400 italic"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 1.2, duration: 0.6 }}
+            >
+              (All links open in new tab)
+            </motion.p> */}
+          </div>
+          <div className="grid grid-cols-12 gap-24 gap-y-32 xl:gap-x-16 lg:gap-x-8 md:gap-y-24 sm:gap-x-0">
+            <div className="col-span-12">
               <FeaturedProject
-
                 title="Crypto Screener Application"
                 img={project1}
                 summary="A feature-rich Crypto Screener App using React, Tailwind CSS, Context API, React Router and Recharts. 
@@ -101,9 +141,8 @@ const projects = () => {
                 type="Featured Project"
               />
             </div>
-            <div className='col-span-6 sm:col-span-12'>
+            <div className="col-span-6 sm:col-span-12">
               <Project
-
                 title="Crypto Screener Application"
                 img={project1}
                 summary="A feature-rich Crypto Screener App using React, Tailwind CSS, Context API, React Router and Recharts. 
@@ -114,9 +153,8 @@ local currency."
                 type="Featured Project"
               />
             </div>
-            <div className='col-span-6 sm:col-span-12'>
+            <div className="col-span-6 sm:col-span-12">
               <Project
-
                 title="Crypto Screener Application"
                 img={project1}
                 summary="A feature-rich Crypto Screener App using React, Tailwind CSS, Context API, React Router and Recharts. 
@@ -128,9 +166,8 @@ local currency."
               />
             </div>
 
-            <div className='col-span-12'>
+            <div className="col-span-12">
               <FeaturedProject
-
                 title="Crypto Screener Application"
                 img={project1}
                 summary="A feature-rich Crypto Screener App using React, Tailwind CSS, Context API, React Router and Recharts. 
@@ -141,9 +178,8 @@ local currency."
                 type="Featured Project"
               />
             </div>
-            <div className='col-span-6 sm:col-span-12'>
+            <div className="col-span-6 sm:col-span-12">
               <Project
-
                 title="Crypto Screener Application"
                 img={project1}
                 summary="A feature-rich Crypto Screener App using React, Tailwind CSS, Context API, React Router and Recharts. 
@@ -154,9 +190,8 @@ local currency."
                 type="Featured Project"
               />
             </div>
-            <div className='col-span-6 sm:col-span-12'>
+            <div className="col-span-6 sm:col-span-12">
               <Project
-
                 title="Crypto Screener Application"
                 img={project1}
                 summary="A feature-rich Crypto Screener App using React, Tailwind CSS, Context API, React Router and Recharts. 
@@ -171,7 +206,7 @@ local currency."
         </Layout>
       </main>
     </>
-  )
+  );
 }
 
 export default projects

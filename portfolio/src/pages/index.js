@@ -13,6 +13,8 @@ import ArticlesPage from "./articlepage";
 import ProjectsPage from "./projectpage";
 import { useEffect, useState } from "react";
 import { motion } from 'framer-motion';
+import SocialMedia from "./socialmedia";
+import MyShop from "./myshop";
 
 export default function Home() {
   const [showScrollTop, setShowScrollTop] = useState(false);
@@ -87,7 +89,9 @@ export default function Home() {
       <AboutPage />
       <ProjectsPage />
       <ArticlesPage />
-
+      <SocialMedia />
+      <MyShop />
+      
       {/* Scroll-to-Top Button with Bounce Animation */}
       {showScrollTop && (
         <motion.button
