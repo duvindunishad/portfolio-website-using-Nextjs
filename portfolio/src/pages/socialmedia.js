@@ -141,8 +141,8 @@ const SocialMediaCards = ({
           animate={{ opacity: 1 }}
           transition={{ delay: 0.8, duration: 0.6 }}
         >
-          Let's build connections! Follow my journey across platforms for daily
-          tech insights, tutorials, and behind-the-scenes content.
+          Let&apos;s build connections! Follow my journey across platforms for
+          daily tech insights, tutorials, and behind-the-scenes content.
         </motion.p>
 
         <motion.p

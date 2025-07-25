@@ -71,16 +71,16 @@ const AboutPage = () => {
 
                 <div className="space-y-4 text-lg leading-relaxed">
                   <p>
-                    I'm <strong>Duvindu Nishad</strong>, a dedicated Software
-                    Engineer specializing in full stack development. Holding a
-                    BSc. (Hons) in Software Engineering from Plymouth
+                    I&apos;m <strong>Duvindu Nishad</strong>, a dedicated
+                    Software Engineer specializing in full stack development.
+                    Holding a BSc. (Hons) in Software Engineering from Plymouth
                     University, I combine academic rigor with practical
                     expertise to deliver robust solutions.
                   </p>
                   <p>
                     As an active contributor to the FOSS Community at NSBM Green
                     University and creator of
-                    <strong> Digitalcodehub</strong> YouTube channel, I'm
+                    <strong> Digitalcodehub</strong> YouTube channel, I&apos;m
                     passionate about knowledge sharing and building educational
                     coding resources.
                   </p>
