@@ -4,7 +4,30 @@ import Image from "next/image";
 import Head from "next/head";
 import { FiShoppingCart, FiHeart, FiStar, FiArrowRight } from "react-icons/fi";
 import TransitionEffect from "@/component/TransitionEffect";
-import img1 from "../images/products/125453_5.jpg@1200w_0e.jpg";
+import img1 from "../images/products/1.gif";
+import img2 from "../images/products/2.gif";
+import img3 from "../images/products/3.gif";
+import img4 from "../images/products/4.gif";
+import img5 from "../images/products/5.gif";
+import img6 from "../images/products/6.gif";
+import img7 from "../images/products/7.gif";
+import img8 from "../images/products/8.gif";
+import img9 from "../images/products/9.gif";
+import img10 from "../images/products/10.gif";
+import img11 from "../images/products/11.gif";
+import img12 from "../images/products/12.png";
+import img13 from "../images/products/13.png";
+import img14 from "../images/products/14.gif";
+import img15 from "../images/products/15.png";
+import img16 from "../images/products/16.gif";
+import img17 from "../images/products/17.gif";
+import img18 from "../images/products/18.gif";
+import img19 from "../images/products/19.gif";
+import img20 from "../images/products/20.png";
+import img21 from "../images/products/21.gif";
+import img22 from "../images/products/22.gif";
+import img23 from "../images/products/23.gif";
+import img24 from "../images/products/24.png";
 
 const ProductCard = ({ product, addToCart }) => {
   const [isHovered, setIsHovered] = useState(false);
@@ -70,7 +93,7 @@ const ProductCard = ({ product, addToCart }) => {
             />
           </motion.button>
 
-          <motion.button
+          {/* <motion.button
             className="px-6 py-2 bg-white text-gray-900 rounded-full font-medium shadow-lg flex items-center gap-2"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
@@ -78,7 +101,7 @@ const ProductCard = ({ product, addToCart }) => {
           >
             <FiShoppingCart className="w-5 h-5" />
             Quick Add
-          </motion.button>
+          </motion.button> */}
         </motion.div>
       </div>
 
@@ -208,8 +231,8 @@ const MyShop = () => {
                 price: 3.0,
                 description:
                   "Dynamic portfolio page with customizable color schemes using HTML, CSS, JS",
-                image: img1,
-                fallbackImage: "/images/products/125453_5.jpg@1200w_0e.jpg",
+                image: img2,
+                fallbackImage: "/images/products/125257_2r.gif",
                 rating: 4.5,
                 category: "Portfolio",
                 featured: false,
@@ -225,7 +248,7 @@ const MyShop = () => {
                 price: 2.0,
                 description:
                   "Complete login and registration system with validation",
-                image: img1,
+                image: img3,
                 rating: 4.6,
                 category: "Auth System",
                 featured: true,
@@ -241,7 +264,7 @@ const MyShop = () => {
                 price: 2.0,
                 description:
                   "Festive UI design with animations for holiday season",
-                image: img1,
+                image: img4,
                 rating: 4.8,
                 category: "Seasonal",
                 featured: false,
@@ -257,7 +280,7 @@ const MyShop = () => {
                 price: 2.0,
                 description:
                   "Animated hearts and romantic theme for Valentine's Day",
-                image: img1,
+                image: img5,
                 rating: 4.4,
                 category: "Seasonal",
                 featured: false,
@@ -273,7 +296,7 @@ const MyShop = () => {
                 price: 2.0,
                 description:
                   "Autobot vs Decepticon animated form with cool effects",
-                image: img1,
+                image: img6,
                 rating: 4.9,
                 category: "Themed",
                 featured: true,
@@ -288,7 +311,7 @@ const MyShop = () => {
                 name: "Ben10 Omnitrix Login Form",
                 price: 2.0,
                 description: "Alien inspired web design with Omnitrix effects",
-                image: img1,
+                image: img7,
                 rating: 4.7,
                 category: "Themed",
                 featured: false,
@@ -299,11 +322,11 @@ const MyShop = () => {
             {/* Ocean Wave Login Form */}
             <ProductCard
               product={{
-                id: 8,
+                id: 399864,
                 name: "Ocean Wave Login Form",
                 price: 2.0,
                 description: "Animated beach theme with wave effects",
-                image: img1,
+                image: img8,
                 rating: 4.5,
                 category: "Themed",
                 featured: false,
@@ -314,12 +337,12 @@ const MyShop = () => {
             {/* 3D Card Hover Effect */}
             <ProductCard
               product={{
-                id: 9,
+                id: 399514,
                 name: "3D Card Hover Effect",
                 price: 1.0,
                 description:
                   "Modern UI design tutorial with impressive 3D hover effects",
-                image: img1,
+                image: img9,
                 rating: 4.6,
                 category: "UI Effect",
                 featured: false,
@@ -330,12 +353,12 @@ const MyShop = () => {
             {/* Cyberpunk Neon Login Form */}
             <ProductCard
               product={{
-                id: 10,
+                id: 399508,
                 name: "Cyberpunk Neon Login Form",
                 price: 2.0,
                 description:
                   "Glowing effects & animations with cyberpunk aesthetic",
-                image: img1,
+                image: img10,
                 rating: 4.8,
                 category: "Themed",
                 featured: true,
@@ -346,11 +369,11 @@ const MyShop = () => {
             {/* NEON GLOW Login Page */}
             <ProductCard
               product={{
-                id: 11,
+                id: 399489,
                 name: "NEON GLOW Login Page",
                 price: 1.0,
                 description: "3D Effects with modern UI design and animations",
-                image: img1,
+                image: img11,
                 rating: 4.7,
                 category: "Themed",
                 featured: false,
@@ -361,12 +384,12 @@ const MyShop = () => {
             {/* 350 WordPress Template Pack */}
             <ProductCard
               product={{
-                id: 12,
+                id: 388793,
                 name: "350 WordPress Template Pack",
                 price: 5.0,
                 description:
                   "Massive collection of WordPress templates for various niches",
-                image: img1,
+                image: img12,
                 rating: 4.9,
                 category: "Template Pack",
                 featured: true,
@@ -377,12 +400,12 @@ const MyShop = () => {
             {/* Professional POS System */}
             <ProductCard
               product={{
-                id: 13,
+                id: 385242,
                 name: "Professional POS System",
                 price: 5.0,
                 description:
                   "Ready-to-use PHP, MySQL, Bootstrap system for education or business",
-                image: img1,
+                image: img13,
                 rating: 4.8,
                 category: "Web Application",
                 featured: true,
@@ -393,12 +416,12 @@ const MyShop = () => {
             {/* Modern Portfolio Website */}
             <ProductCard
               product={{
-                id: 14,
+                id: 342795,
                 name: "Modern Portfolio Website",
                 price: 3.0,
                 description:
                   "Clean, responsive portfolio using HTML, CSS, JavaScript",
-                image: img1,
+                image: img14,
                 rating: 4.6,
                 category: "Portfolio",
                 featured: false,
@@ -409,12 +432,12 @@ const MyShop = () => {
             {/* 30+ Web Templates Pack */}
             <ProductCard
               product={{
-                id: 15,
+                id: 337097,
                 name: "30+ Web Templates Pack",
                 price: 2.0,
                 description:
                   "Creative projects for beginners to advanced developers",
-                image: img1,
+                image: img15,
                 rating: 4.7,
                 category: "Template Pack",
                 featured: false,
@@ -425,11 +448,11 @@ const MyShop = () => {
             {/* Login & Registration Website */}
             <ProductCard
               product={{
-                id: 16,
+                id: 251690,
                 name: "Login & Registration Website",
                 price: 3.0,
                 description: "Complete auth system with PHP backend",
-                image: img1,
+                image: img16,
                 rating: 4.5,
                 category: "Auth System",
                 featured: false,
@@ -440,11 +463,11 @@ const MyShop = () => {
             {/* Card Transition Effect */}
             <ProductCard
               product={{
-                id: 17,
+                id: 237029,
                 name: "Card Transition Effect",
                 price: 1.0,
                 description: "Smooth card transitions using only HTML and CSS",
-                image: img1,
+                image: img17,
                 rating: 4.4,
                 category: "UI Effect",
                 featured: false,
@@ -455,11 +478,11 @@ const MyShop = () => {
             {/* Responsive Login/Register Form */}
             <ProductCard
               product={{
-                id: 18,
+                id: 179965,
                 name: "Responsive Login/Register Form",
                 price: 3.0,
                 description: "2023 modern design with JavaScript validation",
-                image: img1,
+                image: img18,
                 rating: 4.6,
                 category: "Auth System",
                 featured: true,
@@ -470,12 +493,12 @@ const MyShop = () => {
             {/* Modern Auth Website */}
             <ProductCard
               product={{
-                id: 19,
+                id: 214566,
                 name: "Modern Auth Website",
                 price: 3.0,
                 description:
                   "Complete login/registration with HTML, CSS, JS, PHP",
-                image: img1,
+                image: img19,
                 rating: 4.7,
                 category: "Auth System",
                 featured: false,
@@ -486,11 +509,11 @@ const MyShop = () => {
             {/* React Login & Registration */}
             <ProductCard
               product={{
-                id: 20,
+                id: 207988,
                 name: "React Login & Registration",
                 price: 5.0,
                 description: "Complete auth pages built with React",
-                image: img1,
+                image: img20,
                 rating: 4.8,
                 category: "React",
                 featured: true,
@@ -501,12 +524,12 @@ const MyShop = () => {
             {/* HTML CSS Text Animation */}
             <ProductCard
               product={{
-                id: 21,
+                id: 224793,
                 name: "HTML CSS Text Animation",
                 price: 1.0,
                 description:
                   "Create stunning text effects with step-by-step guide",
-                image: img1,
+                image: img21,
                 rating: 4.3,
                 category: "UI Effect",
                 featured: false,
@@ -517,11 +540,11 @@ const MyShop = () => {
             {/* eBay Description Template */}
             <ProductCard
               product={{
-                id: 22,
+                id: 220393,
                 name: "eBay Description Template",
                 price: 2.0,
                 description: "Professional template for eBay product listings",
-                image: img1,
+                image: img22,
                 rating: 4.2,
                 category: "Template",
                 featured: false,
@@ -532,12 +555,12 @@ const MyShop = () => {
             {/* Analog Clock Tutorial */}
             <ProductCard
               product={{
-                id: 23,
+                id: 183873,
                 name: "Analog Clock Tutorial",
                 price: 2.0,
                 description:
                   "Learn to create a functional analog clock with JS",
-                image: img1,
+                image: img23,
                 rating: 4.5,
                 category: "Tutorial",
                 featured: false,
@@ -548,11 +571,11 @@ const MyShop = () => {
             {/* Modern Contact Us Page */}
             <ProductCard
               product={{
-                id: 24,
+                id: 181947,
                 name: "Modern Contact Us Page",
                 price: 2.0,
                 description: "Responsive contact page with form validation",
-                image: img1,
+                image: img24,
                 rating: 4.6,
                 category: "UI Component",
                 featured: false,
