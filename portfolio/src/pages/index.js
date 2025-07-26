@@ -62,18 +62,7 @@ export default function Home() {
                 text="Hello! 👋 I'm Duvindu Nishad "
                 className="!text-6xl !text-left xl:!text-5xl lg:!text-center lg:!text-6xl md:!text-5xl sm:!text-3xl"
               />
-              <script
-                data-name="BMC-Widget"
-                data-cfasync="false"
-                src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js"
-                data-id="digitalcodehub"
-                data-description="Support me on Buy me a coffee!"
-                data-message="Thank you for visiting!"
-                data-color="#5F7FFF"
-                data-position="Right"
-                data-x_margin="18"
-                data-y_margin="18"
-              ></script>
+              
               <p className="my-4 text-base font-medium md:text-sm sm:text-xs">
                 Skilled MERN stack developer with expertise in Next.js, React,
                 MongoDB, JavaScript, Node.js, and TypeScript, specializing in
